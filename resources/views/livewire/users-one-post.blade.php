@@ -3,8 +3,8 @@
         <h2 class="text-5xl m-4">{{ $post->title }}</h2>
         <h4 class="text-indigo-800 mb-4 font-bold">Category:</h4>
         <div class="flex md:flex-row flex-wrap p-4">
-            <img src="{{ $post->img }}" class="w-100 mr-4" alt="Image">
-            <img src="{{ $post->schema1 }}" class="w-100" alt="Image">
+            <img src="{{ $post->img }}" class="w-80 mr-4" alt="Image">
+            <img src="{{ $post->schema1 }}" class="w-60" alt="Image">
         </div>
         <h4 class="text-indigo-800 mt-4 font-bold">You need:</h4>
         <h4>{{ $post->you_need }}</h4>
