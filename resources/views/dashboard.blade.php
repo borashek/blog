@@ -21,7 +21,7 @@
                                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                                     <div class="ml-4 text-lg leading-7 font-semibold">
                                         <a class="underline text-gray-900 dark:text-white" href="#">
-                                            {{ __('My favorite works') }}
+                                            {{ __('My inspiration') }}
                                         </a>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                                     <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">
                                         <a href="#" class="underline text-gray-900 dark:text-white">
-                                            My inspiration
+                                            Notes
                                         </a>
                                     </div>
                                 </div>
