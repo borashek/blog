@@ -12,13 +12,15 @@ use App\Http\Livewire\UsersInspiration;
 use App\Http\Livewire\UsersAboutMe;
 use App\Http\Livewire\UsersYourWorks;
 use App\Http\Livewire\UsersMyWorks;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
+use App\Http\Livewire\Users;
+use App\Http\Livewire\Roles;
 
 //Admin routes
 Route::get('/admin/blog/posts', Posts::class)->name('admin');
 Route::get('/admin/blog/categories', Cats::class)->name('category');
 Route::get('/admin/blog/advertising', Advertising::class)->name('adv');
+Route::get('/admin/users', Users::class)->name('users');
+Route::get('/admin/roles', Roles::class)->name('roles');
 
 //Common routes
 Route::get('/', [SiteController::class, 'welcome'])->name('home');
@@ -34,30 +36,3 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-////Roles routes
-//Route::get('/create-role', function() {
-//    $newPost        = Permission::create(['name' => 'new post']);
-//    $editPost       = Permission::create(['name' => 'edit post']);
-//    $deletePost     = Permission::create(['name' => 'delete post']);
-//    $newCategory    = Permission::create(['name' => 'category']);
-//    $editCategory   = Permission::create(['name' => 'edit category']);
-//    $deleteCategory = Permission::create(['name' => 'delete category']);
-//    $newAdv         = Permission::create(['name' => 'new adv']);
-//    $editAdv        = Permission::create(['name' => 'edit adv']);
-//    $deleteAdv      = Permission::create(['name' => 'delete adv']);
-//
-//    $Role = Permission::create(['name' => 'role']);
-//
-//    $role = Role::create(['name' => 'admin']);
-//    $role = givePermissionTo($newPost);
-//    $role = givePermissionTo($editPost);
-//    $role = givePermissionTo($deletePost);
-//    $role = givePermissionTo($newCategory);
-//    $role = givePermissionTo($editCategory);
-//    $role = givePermissionTo($deleteCategory);
-//    $role = givePermissionTo($newAdv);
-//    $role = givePermissionTo($editAdv);
-//    $role = givePermassionTo($deleteAdv);
-//
-//    return 'role created';
-//});

@@ -31,6 +31,16 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Users/admin') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('roles') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Roles/admin') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Back') }}
                     </x-jet-nav-link>
