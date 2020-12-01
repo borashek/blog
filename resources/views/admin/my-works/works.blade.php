@@ -1,6 +1,6 @@
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Manage Roles
+        Manage My Works
     </h2>
 </x-slot>
 <div class="py-2 m-6">
@@ -9,18 +9,18 @@
             <div class="mb-2">
                 <div class="flex md:flex-row w-full">
                     <div class="w-full md:w-3/10 text-left">
-                        <button wire:click="create()" class="w-40 ml-2 focus:outline-none focus:shadow-outline bg-indigo-500 hover:bg-indigo-700
+                        <button wire:click="create()" class="w-100 ml-2 focus:outline-none focus:shadow-outline bg-indigo-500 hover:bg-indigo-700
                             h-10 text-white font-bold py-1 px-4 rounded">
-                            Create New Role
+                            Create New Work
                         </button>
                         @if($isOpen)
-                            @include('admin.roles.create')
+                            @include('admin.my-works.create')
                         @endif
                     </div>
                     <div class="w-full md:w-8/10 text-center">
                         <input wire:model="search" type="text" class="w-full shadow appearance-none border rounded py-2
                         px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1"
-                               placeholder="Search roles:" name="search">
+                               placeholder="Search posts:" name="search">
                         @error('search') <span class="text-red-500">{{ $message }}</span>@enderror
                     </div>
                     <div class="w-full md:w-1/10">
@@ -48,32 +48,42 @@
                 <thead>
                     <tr class="bg-gray-100">
                         <th class="border px-4 py-2 w-4">No.</th>
-{{--                        <th class="border px-4 py-2">Category</th>--}}
-                        <th class="border px-4 py-2 w-28">Role</th>
-                        <th class="border px-4 py-2 w-28">Permissions</th>
-                        <th class="border px-4 py-2 w-28">Actions</th>
+                        <th class="border px-4 py-2 w-24">Img&schema</th>
+                        <th class="border px-4 py-2 w-16">Title</th>
+                        <th class="border px-4 py-2 w-40">You need</th>
+                        <th class="border px-4 py-2 w-28">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($roles as $role)
+                @foreach($works as $work)
                     <tr>
                         <td class="border px-4 py-2">
-                            {{ $role->id }}
+                            {{ $work->id }}
                         </td>
-{{--                        <td class="border px-4 py-2">{{ $post->category }}</td>--}}
-                        <td class="border px-4 py-2">
-                            {{ $role->name }}
+                        <td class="border px-4 py-2 w-1/2">
+                            <div class="flex md:flex-row flex-wrap p-4">
+                                <img src="{{ $work->img }}" class="w-12 mr-2" alt="">
+                                <img src="{{ $work->schema1 }}" class="w-12" alt="">
+                            </div>
                         </td>
                         <td class="border px-4 py-2">
-
+                            {{ $work->title }}
                         </td>
                         <td class="border px-4 py-2">
-                            <button wire:click="edit({{ $role->id }})" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded">
+                            {{ $work->you_need }}
+                        </td>
+                        <td class="border px-4 py-2">
+                            <button wire:click="edit({{ $work->id }})" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded">
                                 Edit
                             </button>
-                            <button wire:click="delete({{ $role->id }})" class="mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+                            <button wire:click="delete({{ $work->id }})" class="mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
                                 Delete
                             </button>
+                            <a href="{{ route('my-works', $work->id) }}">
+                                <button class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+                                    Show
+                                </button>
+                            </a>
                         </td>
                     </tr>
                 @endforeach
@@ -81,7 +91,7 @@
             </table>
         </div>
         <div class="mt-4">
-            {{ $roles->links() }}
+            {{ $works->links() }}
         </div>
     </div>
 </div>

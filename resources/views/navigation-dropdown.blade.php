@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('home') }}">
                         <img src="/img/knitting.png" width="50" alt="Knitting Blog Dashboard">
                     </a>
                 </div>
@@ -15,34 +15,41 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
+                @if(Auth::user()->hasRole('super-admin'))
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('category') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Categories') }}
+                        </x-jet-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('admin') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Blog') }}
+                        </x-jet-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('adv') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Advertisments') }}
+                        </x-jet-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Users') }}
+                        </x-jet-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('roles') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Roles') }}
+                        </x-jet-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('permissions') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Permissions') }}
+                        </x-jet-nav-link>
+                    </div>
+                @endif
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('category') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Categories/admin') }}
-                    </x-jet-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('admin') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Blog/admin') }}
-                    </x-jet-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('adv') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Advertisments/admin') }}
-                    </x-jet-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Users/admin') }}
-                    </x-jet-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('roles') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Roles/admin') }}
-                    </x-jet-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Back') }}
+                    <x-jet-nav-link href="{{ route('works') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('My Works') }}
                     </x-jet-nav-link>
                 </div>
             </div>

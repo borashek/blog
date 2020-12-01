@@ -3,22 +3,22 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use Spatie\Permission\Models\Role;
 use Livewire\WithPagination;
+use Spatie\Permission\Models\Permission;
 
-class Roles extends Component
+class Permissions extends Component
 {
     use WithPagination;
 
-    public $search, $name, $role_id;
+    public $search, $name, $permission_id;
     public $isOpen = 0;
 
     public function render()
     {
         $search = '%' . $this->search . '%';
-        $roles  = Role::where('name', 'LIKE', $search)
-            ->latest()->paginate(10);
-        return view('admin.roles.roles', ['roles' => $roles]);
+        $permissions  = Permission::where('name', 'LIKE', $search)
+            ->latest()->paginate(20);
+        return view('admin.roles.permissions.permissions', ['permissions' => $permissions]);
     }
 
     public function create()
@@ -40,7 +40,7 @@ class Roles extends Component
     private function resetInputFields(){
         $this->name  = '';
 
-        return view('admin.roles.create');
+        return view('admin.roles.permissions.create');
     }
 
     public function store()
@@ -49,13 +49,13 @@ class Roles extends Component
             'name'  => 'required',
         ]);
 
-        Role::updateOrCreate(
-            ['id'    => $this->role_id],
+        Permission::updateOrCreate(
+            ['id'    => $this->permission_id],
             ['name'  => $this->name]
         );
 
         session()->flash('message',
-            $this->role_id ? 'Role Updated Successfully.' : 'Role Created Successfully.');
+            $this->permission_id ? 'Permission Updated Successfully.' : 'Permission Created Successfully.');
 
         $this->closeModal();
         $this->resetInputFields();
@@ -63,17 +63,17 @@ class Roles extends Component
 
     public function edit($id)
     {
-        $role = Role::findOrFail($id);
+        $permission = Permission::findOrFail($id);
 
-        $this->role_id    = $id;
-        $this->name       = $role->name;
+        $this->permission_id  = $id;
+        $this->name           = $permission->name;
 
         $this->openModal();
     }
 
     public function delete($id)
     {
-        Role::find($id)->delete();
-        session()->flash('message', 'Role Deleted Successfully.');
+        Permission::find($id)->delete();
+        session()->flash('message', 'Permission Deleted Successfully.');
     }
 }

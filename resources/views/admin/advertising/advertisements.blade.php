@@ -23,7 +23,7 @@
                 <thead>
                     <tr class="bg-gray-100">
                         <th class="border px-4 py-2 w-20">No.</th>
-                        <th class="border px-4 py-2">Image</th>
+                        <th class="border px-4 py-2 w-40">Image</th>
                         <th class="border px-4 py-2 w-80">Link</th>
                         <th class="border px-4 py-2 w-28">Action</th>
                     </tr>
@@ -32,7 +32,9 @@
                 @foreach($advertisements as $advertisement)
                     <tr>
                         <td class="border px-4 py-2">{{ $advertisement->id }}</td>
-                        <td class="border px-4 py-2 w-1/2">{{ $advertisement->image }}</td>
+                        <td class="border px-4 py-2 w-1/2">
+                            <img class="w-40" src="{{ $advertisement->image }}" alt="{{ $advertisement->link }}">
+                        </td>
                         <td class="border px-4 py-2 w-1/2">{{ $advertisement->link }}</td>
                         <td class="border px-4 py-2">
                             <button wire:click="edit({{ $advertisement->id }})" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded">

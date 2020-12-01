@@ -67,9 +67,9 @@ class Advertising extends Component
 
         Adv::updateOrCreate(
             ['id'         => $this->advertisement_id],
-            ['image'      => $this->image],
-            ['site_title' => $this->site_title],
-            ['link'       => $this->link]
+            ['image'      => $this->image,
+            'site_title' => $this->site_title,
+            'link'       => $this->link]
         );
 
         session()->flash('message',

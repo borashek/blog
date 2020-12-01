@@ -4,14 +4,13 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsTable extends Migration
+class CreateWorksTable extends Migration
 {
-
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('works', function (Blueprint $table) {
             $table->id();
-            $table->integer('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreignId('user_id')->nullable()->index();
             $table->string('img');
             $table->string('title');
             $table->string('you_need');
@@ -21,9 +20,8 @@ class CreatePostsTable extends Migration
         });
     }
 
-
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('works');
     }
 }

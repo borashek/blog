@@ -8,44 +8,9 @@
         <!-- This element is to trick the browser into centering the modal contents. -->
         <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>​
 
-        <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform
-        transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true"
-             aria-labelledby="modal-headline">
-            <div class="bg-white px-4 pb-4 sm:p-6 sm:pb-4">
+        <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="">
-                    <div class="mb-4">
-                        <div class="hidden sm:flex sm:items-center sm:ml-6">
-                            <x-jet-dropdown align="left" width="48">
-                                <x-slot name="trigger">
-                                    <div class="flex flex-row">
-                                        <a href="#" class="block text-gray-700 text-sm font-bold mt-2 mb-2">
-                                            Categories
-                                        </a>
-                                        <a href="#" class="mr-6 mt-1 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-                                            <svg class="mt-2 fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0
-                                                111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                            </svg>
-                                        </a>
-                                        <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
-                                                leading-tight focus:outline-none focus:shadow-outline" id="exampleFormImageInput" placeholder="No Category is chosen"
-                                               wire:model="getCategory">
-                                    </div>
-                                </x-slot>
-                                <x-slot name="content">
-                                    <!-- Dropdown items -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
-                                        {{ __('Categories of the tutorials') }}
-                                    </div>
-                                    <livewire:users-cats />
-                                </x-slot>
-                            </x-jet-dropdown>
-                        </div>
-
-
-
-
-                    </div>
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Image:</label>
                         <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
@@ -60,13 +25,6 @@
                                wire:model="schema1">
                         @error('schema1') <span class="text-red-500">{{ $message }}</span>@enderror
                     </div>
-{{--                    <div class="mb-4">--}}
-{{--                        <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Schema:</label>--}}
-{{--                        <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700--}}
-{{--                        leading-tight focus:outline-none focus:shadow-outline" id="exampleFormImageInput" placeholder="Enter Link to the Schema 2"--}}
-{{--                               wire:model="schema2">--}}
-{{--                        @error('schema2') <span class="text-red-500">{{ $message }}</span>@enderror--}}
-{{--                    </div>--}}
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Title:</label>
                         <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
@@ -83,7 +41,7 @@
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Text:</label>
-                        <textarea rows="7" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight
+                        <textarea rows="8" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight
                         focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="body"
                                   placeholder="Enter Body"></textarea>
                         @error('body') <span class="text-red-500">{{ $message }}</span>@enderror

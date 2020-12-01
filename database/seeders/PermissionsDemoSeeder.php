@@ -9,7 +9,6 @@ use Spatie\Permission\PermissionRegistrar;
 
 class PermissionsDemoSeeder extends Seeder
 {
-
     public function run()
     {
         // Reset cached roles and permissions
@@ -25,14 +24,8 @@ class PermissionsDemoSeeder extends Seeder
         Permission::create(['name' => 'make advs']);
         Permission::create(['name' => 'edit advs']);
         Permission::create(['name' => 'delete advs']);
-        Permission::create(['name' => 'make roles']);
-        Permission::create(['name' => 'edit roles']);
-        Permission::create(['name' => 'delete roles']);
         Permission::create(['name' => 'edit users']);
         Permission::create(['name' => 'delete users']);
-        Permission::create(['name' => 'make permissions']);
-        Permission::create(['name' => 'edit permissions']);
-        Permission::create(['name' => 'delete permissions']);
         Permission::create(['name' => 'make works']);
         Permission::create(['name' => 'edit works']);
         Permission::create(['name' => 'delete works']);

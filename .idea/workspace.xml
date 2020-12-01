@@ -20,15 +20,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a8d25c1-8ad2-411a-b2bd-3cee99af8d13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/MyWorks.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Permissions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Work.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_27_183400_create_works_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/PostSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/my-works/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/my-works/works.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/permissions/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/permissions/permissions.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/my-works.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Advertising.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Advertising.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Roles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/UsersCats.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/UsersCats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/UsersMyWorks.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/UsersMyWorks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/UsersPosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/UsersPosts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_144944_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_144944_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/PermissionsDemoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PermissionsDemoSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/advertising/advertisements.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/advertising/advertisements.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/categories/categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blog/categories/categories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blog/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blog/posts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/roles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/roles.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/roles.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-adv.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-adv.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-cats.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-cats.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-my-works.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-my-works.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-posts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -154,6 +192,7 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/jenssegers/agent" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kh9uga0yy4A6e8hPLspZ3OzSw4" />
@@ -164,9 +203,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/livewire" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/livewire" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -183,6 +227,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606142180018</updated>
       <workItem from="1606142181225" duration="1242000" />
+      <workItem from="1606745202390" duration="20019000" />
     </task>
     <servers />
   </component>
@@ -199,5 +244,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606769689992">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1606769689992" />
   </component>
 </project>

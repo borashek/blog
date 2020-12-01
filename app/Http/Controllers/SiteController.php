@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Role;
+use App\Models\Permission;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
