@@ -18,11 +18,6 @@ class UsersPosts extends Component
         return 'livewire.custom-pagination-links-view';
     }
 
-    public function updatingSearch()
-    {
-        $this->resetPage();
-    }
-
     public function render(Post $category_id)
     {
         $category = Category::where('id', '=', $category_id);
@@ -30,8 +25,8 @@ class UsersPosts extends Component
         $posts  = Post::where('title', 'LIKE', $search)
             ->orWhere('you_need', 'LIKE', $search)
             ->orWhere('body', 'LIKE', $search)
-            ->latest()->paginate(2);
-        return view('livewire.users-posts', ['posts' => $posts], ['category' => $category])->layout('layouts.user');
+            ->latest()->paginate(4);
+        return view('livewire.users-posts', ['posts' => $posts, 'category' => $category])->layout('layouts.user');
     }
 }
 

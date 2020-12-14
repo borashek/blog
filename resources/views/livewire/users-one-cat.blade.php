@@ -1,11 +1,14 @@
-<h4 class="text-indigo-800 mb-4 font-bold">Category:</h4>
-<h2 class="text-2xl m-4">{{ $category->name }}</h2>
-@foreach($posts as $post)
+<h4 class="text-indigo-800 text-2xl m-4 text-bold">
+    Category: {{ $category->name }}
+</h4>
+@foreach($category->posts as $post)
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 mb-6">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
             <h2 class="text-5xl m-4">{{ $post->title }}</h2>
-            <h4 class="text-indigo-800 mb-4 font-bold">Category:</h4>
-            <h2 class="text-xl m-4">{{ $category->category_name }}</h2>
+            <a href="{{ route('one-cat', $post->category->id) }}" class="text-indigo-800 mb-4 font-bold">
+                Category: {{ $post->category->name }}
+            </a>
+            <p>{{ $post->created_at->diffForHumans() }}</p>
             <div class="flex md:flex-row flex-wrap p-4">
                 <img src="{{ $post->img }}" class="w-60 mr-4" alt="">
                 <img src="{{ $post->schema1 }}" class="w-40" alt="">
@@ -20,8 +23,5 @@
         </div>
     </div>
 @endforeach
-<div class="max-w-6xl mx-auto sm:px-6 lg:px-8 mb-6">
-    <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
-        {{ $posts->links('livewire.custom-pagination-links-view') }}
-    </div>
-</div>
+{{ $posts->links('livewire.custom-pagination-links-view') }}
+

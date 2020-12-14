@@ -9,20 +9,23 @@ use Livewire\WithPagination;
 
 class UsersOneCat extends Component
 {
-    public $category;
-
     use WithPagination;
+
+    public $search, $category;
 
     public function mount($id)
     {
         $this->category = Category::find($id);
     }
 
-    public function render()
+    public function render(Category $id)
     {
-        $posts = Post::where('category_id', 'LIKE', 'id')
-                ->latest()->paginate(2);
-
+        $search = '%' . $this->search . '%';
+        $posts  = Post::where('title', 'LIKE', $search)
+            ->orWhere('you_need', 'LIKE', $search)
+            ->orWhere('body', 'LIKE', $search)
+            ->orWhere('category_id', '=', $id)
+            ->latest()->paginate(4);
         return view('livewire.users-one-cat', ['posts' => $posts])->layout('layouts.user');
     }
 }

@@ -82,7 +82,7 @@
                                 </a>
                                 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div class="rounded-md shadow">
-                                        <a href="#" class="md:w-full sm:w-60 flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 ">
+                                        <a href="{{ route('users-works') }}" class="md:w-full sm:w-60 flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 ">
                                             Send me your work
                                         </a>
                                     </div>
@@ -100,9 +100,6 @@
                     <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="/img/promo_knitting.jpg" alt="Knitting blog">
                 </div>
             </div>
-
-
-
             <div class="bg-indigo-50 p-10">
                 <div>
                     <main>
@@ -145,7 +142,6 @@
                                 <h4 class="text-2xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-lg sm:leading-none md:text-lg">
                                     You will find your inspiration here..)
                                 </h4>
-                                <livewire:users-search-post />
                                 {{ $slot }}
                             </div>
                             <div class="w-full md:w-1/5">

@@ -24,5 +24,8 @@
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/"
+    },
+    "dependencies": {
+        "alpinejs": "^2.7.3"
     }
 }

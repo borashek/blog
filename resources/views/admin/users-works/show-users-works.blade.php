@@ -11,10 +11,10 @@
                     <div class="w-full md:w-3/10 text-left">
                         <button wire:click="create()" class="w-40 ml-2 focus:outline-none focus:shadow-outline bg-indigo-500 hover:bg-indigo-700
                             h-10 text-white font-bold py-1 px-4 rounded">
-                            Create New Post
+                            Edit User's Work
                         </button>
                         @if($isOpen)
-                            @include('admin.blog.create')
+                            @include('admin.users-works.edit')
                         @endif
                     </div>
                     <div class="w-full md:w-8/10 text-center">
@@ -43,56 +43,50 @@
             @endif
             <table class="space-y-48 table-fixed w-full">
                 <thead>
-                    <tr class="bg-gray-100">
-                        <th class="border px-4 py-2 w-4">No.</th>
-                        <th class="border px-4 py-2 w-10">Category</th>
-                        <th class="border px-4 py-2 w-24">Img&schema</th>
-                        <th class="border px-4 py-2 w-16">Title</th>
-                        <th class="border px-4 py-2 w-40">You need</th>
-                        <th class="border px-4 py-2 w-28">Action</th>
-                    </tr>
+                <tr class="bg-gray-100">
+                    <th class="border px-4 py-2 w-4">No.</th>
+                    <th class="border px-4 py-2 w-10">User name</th>
+{{--                    <th class="border px-4 py-2 w-24">Img&schema</th>--}}
+                    <th class="border px-4 py-2 w-16">Email</th>
+                    <th class="border px-4 py-2 w-16">Title</th>
+                    <th class="border px-4 py-2 w-40">Description</th>
+                    <th class="border px-4 py-2 w-28">Action</th>
+                </tr>
                 </thead>
                 <tbody>
-                @foreach($posts as $post)
+                @foreach($worksOfUsers as $workOfUsers)
                     <tr>
                         <td class="border px-4 py-2">
-                            {{ $post->id }}
+                            {{ $workOfUsers->id }}
                         </td>
-                        <td class="border px-4 py-2">{{ $post->category->name }}</td>
-                        <td class="border px-4 py-2 w-1/2">
-                            <div class="flex md:flex-row flex-wrap p-4">
-                                @if($post->img)
-                                    <img src="{{ $post->img }}" class="w-20 mr-2" alt="">
-                                @endif
-                                @if($post->schema1)
-                                    <img src="{{ $post->schema1 }}" class="w-12" alt="">
-                                @endif
-                                @if($post->pic)
-                                    <img src="{{ url('/storage/imgPosts/' . $post->pic) }}" class="w-60" alt="{{ $post->title }}" />
-                                @endif
-                                @if($post->schema2)
-                                    <img src="{{ url('/storage/imgPosts/' . $post->schema2) }}" class="w-60" alt="{{ $post->title }}" />
-                                @endif
-                            </div>
+                        <td class="border px-4 py-2">{{ $workOfUsers->name }}</td>
+{{--                        <td class="border px-4 py-2 w-1/2">--}}
+{{--                            <div class="flex md:flex-row flex-wrap p-4">--}}
+{{--                                <img src="{{ $post->img }}" class="w-20 mr-2" alt="">--}}
+{{--                                <img src="{{ $post->schema1 }}" class="w-12" alt="">--}}
+{{--                            </div>--}}
+{{--                        </td>--}}
+                        <td class="border px-4 py-2">
+                            {{ $workOfUsers->email }}
                         </td>
                         <td class="border px-4 py-2">
-                            {{ $post->title }}
+                            {{ $workOfUsers->title }}
                         </td>
                         <td class="border px-4 py-2">
-                            {{ $post->you_need }}
+                            {{ $workOfUsers->description }}
                         </td>
                         <td class="border px-4 py-2">
-                            <button wire:click="edit({{ $post->id }})" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded">
+                            <button wire:click="edit({{ $workOfUsers->id }})" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded">
                                 Edit
                             </button>
-                            <button wire:click="delete({{ $post->id }})" class="mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
+                            <button wire:click="delete({{ $workOfUsers->id }})" class="mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
                                 Delete
                             </button>
-                            <a href="{{ route('post', $post->id) }}">
-                                <button class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
-                                    Show
-                                </button>
-                            </a>
+{{--                            <a href="{{ route('post', $post->id) }}">--}}
+{{--                                <button class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">--}}
+{{--                                    Show--}}
+{{--                                </button>--}}
+{{--                            </a>--}}
                         </td>
                     </tr>
                 @endforeach
@@ -100,7 +94,8 @@
             </table>
         </div>
         <div class="mt-4">
-            {{ $posts->links() }}
+            {{ $worksOfUsers->links() }}
         </div>
     </div>
 </div>
+

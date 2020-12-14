@@ -46,7 +46,19 @@
                             {{ __('Permissions') }}
                         </x-jet-nav-link>
                     </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('permissions') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Permissions') }}
+                        </x-jet-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('show-users-works') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Users Works') }}
+                        </x-jet-nav-link>
+                    </div>
                 @endif
+
+{{--                routes for users and super admin--}}
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('works') }}" :active="request()->routeIs('dashboard')">
                         {{ __('My Works') }}
