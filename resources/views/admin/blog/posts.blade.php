@@ -68,10 +68,10 @@
                                     <img src="{{ $post->schema1 }}" class="w-12" alt="">
                                 @endif
                                 @if($post->pic)
-                                    <img src="{{ url('/storage/imgPosts/' . $post->pic) }}" class="w-60" alt="{{ $post->title }}" />
+                                    <img src="{{ url('/storage/img_posts/' . $post->pic) }}" class="w-60" alt="{{ $post->title }}" />
                                 @endif
                                 @if($post->schema2)
-                                    <img src="{{ url('/storage/imgPosts/' . $post->schema2) }}" class="w-60" alt="{{ $post->title }}" />
+                                    <img src="{{ url('/storage/img_posts/' . $post->schema2) }}" class="w-60" alt="{{ $post->title }}" />
                                 @endif
                             </div>
                         </td>

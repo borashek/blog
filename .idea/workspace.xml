@@ -20,35 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a8d25c1-8ad2-411a-b2bd-3cee99af8d13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/includes/messages_errors.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/includes/messages_success.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/WorksOfUsers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Site.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/UsersCats.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/UsersCats.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/UsersOneCat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/UsersOneCat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/UsersPosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/UsersPosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/UsersSearchPost.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/UsersWorks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/WorksOfUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/WorkOfUsers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/advertising/advertisements.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/advertising/advertisements.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/categories/categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blog/categories/categories.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blog/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/blog/posts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/my-works/works.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/my-works/works.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/permissions/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/permissions/permissions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/roles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/roles.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/users.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users-works/show-users-works.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users-works/show-users-works.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/custom-pagination-links-view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/custom-pagination-links-view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-cats.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-cats.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-one-cat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-one-cat.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-one-post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-one-post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-posts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-search-post.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-works.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-works.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-your-works.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-your-works.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -194,7 +177,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/users-works" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -230,7 +213,10 @@
       <workItem from="1606142181225" duration="1242000" />
       <workItem from="1606745202390" duration="20019000" />
       <workItem from="1607275843581" duration="18060000" />
-      <workItem from="1607955720093" duration="3121000" />
+      <workItem from="1607955720093" duration="14013000" />
+      <workItem from="1608404115053" duration="844000" />
+      <workItem from="1608417959440" duration="112000" />
+      <workItem from="1608433168993" duration="2159000" />
     </task>
     <servers />
   </component>
@@ -250,14 +236,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="485" y="201" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607281114161">
+    <state x="184" y="112" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607983315247">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="485" y="201" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1607281114161" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607357270190">
+    <state x="184" y="112" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1607983315247" />
+    <state x="485" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607981859623">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1607357270190" />
+    <state x="485" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1607981859623" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607982403314">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1607982403314" />
     <state x="539" y="380" key="NewPhpFileDialog" timestamp="1606841222023">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

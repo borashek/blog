@@ -23,7 +23,7 @@
                     </div>
                     <div class="hidden md:block md:ml-10 md:pr-4">
                         <a href="#" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">My works</a>
-{{--                        <a href="{{ route('cats') }}" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Categories</a>--}}
+                        <a href="{{ route('cats') }}" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Categories</a>
                         <a href="#" class="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Your works</a>
 
 
@@ -126,10 +126,6 @@
                         <br class="xl:hidden">
                         <span class="text-indigo-600">online lessons</span>
                     </h2>
-                    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
-                        Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-                    </p>
                     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         <div class="rounded-md shadow">
                             <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">

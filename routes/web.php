@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Livewire\UsersWorks;
+use App\Http\Livewire\WorksOfUsers;
 use App\Http\Livewire\Posts;
 use App\Http\Livewire\UsersOneCat;
 use Illuminate\Support\Facades\Auth;
@@ -28,11 +28,11 @@ Route::get('/admin/users', Users::class)->name('users');
 Route::get('/admin/roles', Roles::class)->name('roles');
 Route::get('/admin/roles/permissions', Permissions::class)->name('permissions');
 Route::get('/admin/my-works', MyWorks::class)->name('works');
-Route::get('admin/users-works', ShowUsersWorks::class)->name('show-users-works');
+Route::get('admin/users-works', WorksOfUsers::class)->name('show-users-works');
 
 //Common routes
-Route::get('/send-me-your-work', UsersWorks::class)->name('users-works');
-Route::post('/blog/posts', [SiteController::class, 'submit'])->name('send');
+Route::get('/send-me-your-work', WorksOfUsers::class)->name('users-works');
+Route::post('/blog/users-works', [SiteController::class, 'submit'])->name('send');
 
 Route::get('/', [SiteController::class, 'welcome'])->name('home');
 Route::get('/blog/posts', UsersPosts::class)->name('blog');

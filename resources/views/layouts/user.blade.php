@@ -32,9 +32,9 @@
                                         <a href="{{ route('my-works') }}" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
                                             My works
                                         </a>
-                                        <a href="{{ route('your-works') }}" class="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-                                            Your works
-                                        </a>
+{{--                                        <a href="{{ route('published-users-works') }}" class="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">--}}
+{{--                                            Your works--}}
+{{--                                        </a>--}}
                                         <a href="{{ route('ins') }}" class="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
                                             Inspiration
                                         </a>
@@ -82,9 +82,9 @@
                                 </a>
                                 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div class="rounded-md shadow">
-                                        <a href="{{ route('users-works') }}" class="md:w-full sm:w-60 flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 ">
-                                            Send me your work
-                                        </a>
+{{--                                        <a href="{{ route('users-works') }}" class="md:w-full sm:w-60 flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 ">--}}
+{{--                                            Your works--}}
+{{--                                        </a>--}}
                                     </div>
                                     <div class="mt-3 sm:mt-0 sm:ml-3">
                                         <a href="{{ route('about-me') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
@@ -114,9 +114,9 @@
                                 <a href="{{ route('my-works') }}" class="block px-3 mt-2 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
                                     My works
                                 </a>
-                                <a href="{{ route('your-works') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
-                                    Your works
-                                </a>
+{{--                                <a href="{{ route('your-works') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">--}}
+{{--                                    Your works--}}
+{{--                                </a>--}}
                                 <a href="{{ route('ins') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
                                     Inspiration
                                 </a>

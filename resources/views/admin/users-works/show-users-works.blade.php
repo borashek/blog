@@ -1,6 +1,6 @@
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Manage Posts
+        Manage Users' Works
     </h2>
 </x-slot>
 <div class="py-2 m-6">
@@ -9,10 +9,10 @@
             <div class="mb-2">
                 <div class="flex md:flex-row w-full">
                     <div class="w-full md:w-3/10 text-left">
-                        <button wire:click="create()" class="w-40 ml-2 focus:outline-none focus:shadow-outline bg-indigo-500 hover:bg-indigo-700
-                            h-10 text-white font-bold py-1 px-4 rounded">
-                            Edit User's Work
-                        </button>
+{{--                        <button wire:click="create()" class="w-40 ml-2 focus:outline-none focus:shadow-outline bg-indigo-500 hover:bg-indigo-700--}}
+{{--                            h-10 text-white font-bold py-1 px-4 rounded">--}}
+{{--                            Edit User's Work--}}
+{{--                        </button>--}}
                         @if($isOpen)
                             @include('admin.users-works.edit')
                         @endif
@@ -45,12 +45,11 @@
                 <thead>
                 <tr class="bg-gray-100">
                     <th class="border px-4 py-2 w-4">No.</th>
-                    <th class="border px-4 py-2 w-10">User name</th>
-{{--                    <th class="border px-4 py-2 w-24">Img&schema</th>--}}
-                    <th class="border px-4 py-2 w-16">Email</th>
-                    <th class="border px-4 py-2 w-16">Title</th>
-                    <th class="border px-4 py-2 w-40">Description</th>
-                    <th class="border px-4 py-2 w-28">Action</th>
+{{--                    <th class="border px-4 py-2 w-10">User name</th>--}}
+                    <th class="border px-4 py-2 w-10">Title</th>
+                    <th class="border px-4 py-2 w-16">Description</th>
+                    <th class="border px-4 py-2 w-16">Img</th>
+                    <th class="border px-4 py-2 w-8">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -59,21 +58,30 @@
                         <td class="border px-4 py-2">
                             {{ $workOfUsers->id }}
                         </td>
-                        <td class="border px-4 py-2">{{ $workOfUsers->name }}</td>
-{{--                        <td class="border px-4 py-2 w-1/2">--}}
-{{--                            <div class="flex md:flex-row flex-wrap p-4">--}}
-{{--                                <img src="{{ $post->img }}" class="w-20 mr-2" alt="">--}}
-{{--                                <img src="{{ $post->schema1 }}" class="w-12" alt="">--}}
-{{--                            </div>--}}
-{{--                        </td>--}}
-                        <td class="border px-4 py-2">
-                            {{ $workOfUsers->email }}
-                        </td>
+{{--                        <td class="border px-4 py-2">{{ $workOfUsers->user->name }}</td>--}}
                         <td class="border px-4 py-2">
                             {{ $workOfUsers->title }}
                         </td>
                         <td class="border px-4 py-2">
-                            {{ $workOfUsers->description }}
+                            {{ $workOfUsers->body }}
+                        </td>
+                        <td class="border px-4 py-2 w-1/2">
+                            <div class="flex md:flex-row flex-wrap p-4">
+{{--                                @if($workOfUsers->img)--}}
+{{--                                    <img src="{{ $workOfUsers->img }}" class="w-20 mr-2" alt="">--}}
+{{--                                @endif--}}
+{{--                                @if($workOfUsers->schema1)--}}
+{{--                                    <img src="{{ $workOfUsers->schema1 }}" class="w-12" alt="">--}}
+{{--                                @endif--}}
+                                @if($workOfUsers->img)
+                                    <img src="{{ url('/storage/docs/' . $workOfUsers->img) }}"
+                                         class="w-60" alt="{{ $workOfUsers->title }}" />
+                                @endif
+{{--                                @if($workOfUsers->schema2)--}}
+{{--                                    <img src="{{ url('/storage/photos_users_works/' . $workOfUsers->schema2) }}"--}}
+{{--                                         class="w-60" alt="{{ $workOfUsers->title }}" />--}}
+{{--                                @endif--}}
+                            </div>
                         </td>
                         <td class="border px-4 py-2">
                             <button wire:click="edit({{ $workOfUsers->id }})" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded">
@@ -81,6 +89,9 @@
                             </button>
                             <button wire:click="delete({{ $workOfUsers->id }})" class="mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded">
                                 Delete
+                            </button>
+                            <button wire:click="delete({{ $workOfUsers->id }})" class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+                                Publish
                             </button>
 {{--                            <a href="{{ route('post', $post->id) }}">--}}
 {{--                                <button class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">--}}

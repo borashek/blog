@@ -72,8 +72,8 @@ class Posts extends Component
             'title'       => 'required',
             'you_need'    => 'required',
             'body'        => 'required',
-            'img'         => 'url|max:200|sometimes|nullable',
-            'schema1'     => 'url|max:200|sometimes|nullable',
+            'img'         => 'url|max:300|sometimes|nullable',
+            'schema1'     => 'url|max:300|sometimes|nullable',
             'pic'         => 'image|max:1024|sometimes|nullable',
             'schema2'     => 'image|max:1024|sometimes|nullable'
         ]);
@@ -91,11 +91,11 @@ class Posts extends Component
         ]);
 
         if(!empty($this->schema2)) {
-            $this->schema2->store('public/imgPosts');
+            $this->schema2->store('public/img_posts');
         }
 
         if(!empty($this->pic)) {
-            $this->pic->store('public/imgPosts');
+            $this->pic->store('public/img_posts');
         }
 
         session()->flash('message',
